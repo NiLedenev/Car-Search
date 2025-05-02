@@ -816,7 +816,7 @@ textarea {
 
     gap: 20px;
 
-    background-image: url("/img/features-bg.svg");
+    background-image: url("../img/features-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
