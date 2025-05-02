@@ -1,0 +1,716 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Search</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries-tablet.css">
+    <link rel="stylesheet" href="css/queries-desktop.css">
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<svg width="0" height="0" class="hidden">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12" id="arrow">
+        <path d="M1.83203 6H15.1654M15.1654 6L10.1654 1M15.1654 6L10.1654 11" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21" id="searches">
+        <path d="M4.5 1C4.5 0.447715 4.05228 0 3.5 0C2.94772 0 2.5 0.447715 2.5 1V2.5H1C0.447715 2.5 0 2.94772 0 3.5C0 4.05229 0.447715 4.5 1 4.5H2.5V6C2.5 6.55228 2.94772 7 3.5 7C4.05228 7 4.5 6.55228 4.5 6V4.5H6C6.55228 4.5 7 4.05229 7 3.5C7 2.94772 6.55228 2.5 6 2.5H4.5V1Z"
+              fill="currentColor"></path>
+        <path d="M12.9333 1.64102C12.7848 1.25483 12.4138 1 12 1C11.5862 1 11.2152 1.25483 11.0667 1.64102L9.33247 6.14988C9.03207 6.93093 8.93768 7.156 8.80855 7.33759C8.67899 7.5198 8.5198 7.67899 8.33759 7.80855C8.156 7.93768 7.93093 8.03207 7.14988 8.33248L2.64102 10.0667C2.25483 10.2152 2 10.5862 2 11C2 11.4138 2.25483 11.7848 2.64102 11.9333L7.14988 13.6675C7.93093 13.9679 8.156 14.0623 8.33759 14.1914C8.5198 14.321 8.67899 14.4802 8.80855 14.6624C8.93768 14.844 9.03207 15.0691 9.33248 15.8501L11.0667 20.359C11.2152 20.7452 11.5862 21 12 21C12.4138 21 12.7848 20.7452 12.9333 20.359L14.6675 15.8501C14.9679 15.0691 15.0623 14.844 15.1914 14.6624C15.321 14.4802 15.4802 14.321 15.6624 14.1914C15.844 14.0623 16.0691 13.9679 16.8501 13.6675L21.359 11.9333C21.7452 11.7848 22 11.4138 22 11C22 10.5862 21.7452 10.2152 21.359 10.0667L16.8501 8.33248C16.0691 8.03207 15.844 7.93768 15.6624 7.80855C15.4802 7.67899 15.321 7.5198 15.1914 7.33759C15.0623 7.156 14.9679 6.93093 14.6675 6.14988L12.9333 1.64102Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" id="quote">
+        <path d="M2.93296 40L2.93296 31.6901L7.68156 31.6901C11.4991 31.6901 13.4078 29.7653 13.4078 25.9155L13.4078 21.4084L11.3129 21.4084C8.054 21.4084 5.35381 20.4225 3.21229 18.4507C1.07076 16.4789 -1.54088e-06 13.9906 -1.27821e-06 10.9859C-9.909e-07 7.69952 1.07076 5.02347 3.21229 2.95774C5.35382 0.985912 8.054 1.47662e-07 11.3129 4.32559e-07C14.5717 7.17456e-07 17.2719 1.03287 19.4134 3.0986C21.4618 5.25822 22.486 8.02817 22.486 11.4085L22.486 26.0563C22.486 35.3521 17.8771 40 8.65921 40L2.93296 40ZM30.4469 40L30.4469 31.6901L35.1955 31.6901C39.013 31.6901 40.9218 29.7653 40.9218 25.9155L40.9218 21.4085L38.8268 21.4085C35.568 21.4084 32.8678 20.4225 30.7263 18.4507C28.5847 16.4789 27.514 13.9906 27.514 10.9859C27.514 7.69953 28.5847 5.02347 30.7263 2.95775C32.8678 0.985915 35.568 2.55301e-06 38.8268 2.83791e-06C42.0857 3.1228e-06 44.7859 1.03287 46.9274 3.0986C48.9758 5.25822 50 8.02818 50 11.4085L50 26.0563C50 35.3521 45.3911 40 36.1732 40L30.4469 40Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="star">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.2637 0.289362C12.4639 -0.0964531 11.536 -0.0964543 10.7362 0.28936C10.1825 0.556447 9.78973 1.06202 9.44171 1.63343C9.09179 2.20794 8.70788 2.98886 8.22981 3.96133L8.2298 3.96136L8.21107 3.99945L7.82575 4.78322C7.49792 5.45005 7.40259 5.6248 7.28291 5.75221C7.15945 5.88362 7.01142 5.98861 6.84749 6.06099C6.68857 6.13116 6.49438 6.16173 5.76582 6.24407L5.41603 6.2836L5.37406 6.28834H5.37405C4.22553 6.41812 3.30804 6.52179 2.61343 6.66548C1.92838 6.8072 1.28993 7.01698 0.843026 7.48072C0.203605 8.14421 -0.0974229 9.07162 0.027923 9.99189C0.11553 10.6351 0.505679 11.1902 0.973135 11.7189C1.44711 12.2549 2.12358 12.8938 2.97041 13.6936L3.00135 13.7228L3.37063 14.0715C4.01209 14.6773 4.17656 14.8486 4.2687 15.0311C4.36384 15.2196 4.41451 15.4279 4.4167 15.6397C4.41882 15.8446 4.35051 16.0783 4.05675 16.9298L4.04287 16.9701L4.04284 16.9702C3.60932 18.2267 3.266 19.2219 3.07108 19.9961C2.88172 20.7481 2.77562 21.4867 3.02248 22.1262C3.36987 23.0261 4.12247 23.7005 5.04399 23.9378C5.69701 24.1059 6.39782 23.91 7.10125 23.6279C7.82338 23.3382 8.73779 22.8732 9.8907 22.2869L9.92846 22.2677L10.8249 21.8118C11.4293 21.5045 11.5944 21.4289 11.7528 21.3985C11.9161 21.3675 12.0838 21.3675 12.2472 21.3985C12.4056 21.4289 12.5706 21.5045 13.1751 21.8118L14.0715 22.2677L14.1094 22.2869C15.2622 22.8732 16.1766 23.3382 16.8987 23.6279C17.6021 23.91 18.3029 24.1059 18.9559 23.9378C19.8775 23.7005 20.6301 23.0261 20.9775 22.1262C21.2244 21.4867 21.1182 20.7481 20.9289 19.9961C20.7339 19.2219 20.3907 18.2267 19.9571 16.9701V16.97L19.9432 16.9298C19.6495 16.0783 19.5812 15.8446 19.5832 15.6397C19.5855 15.4279 19.6361 15.2196 19.7313 15.0311C19.8234 14.8486 19.9878 14.6773 20.6294 14.0715L20.9986 13.7228L21.0296 13.6935C21.8764 12.8937 22.5529 12.2549 23.0268 11.7189C23.4943 11.1902 23.8844 10.6351 23.9721 9.99189C24.0974 9.07162 23.7964 8.14421 23.1569 7.48072C22.71 7.01698 22.0716 6.8072 21.3865 6.66548C20.6919 6.52179 19.7744 6.41812 18.626 6.28834L18.5839 6.2836L18.2342 6.24407C17.5056 6.16173 17.3114 6.13116 17.1525 6.06099C16.9886 5.98861 16.8406 5.88362 16.7171 5.75221C16.5974 5.6248 16.5021 5.45005 16.1742 4.78321L15.7889 3.99946L15.7701 3.96135C15.2921 2.98886 14.9082 2.20794 14.5583 1.63343C14.2103 1.06202 13.8176 0.556458 13.2637 0.289362Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="filters">
+        <path d="M31.9999 16V10L37.9999 4L39.9999 8L43.9999 10L37.9999 16H31.9999ZM31.9999 16L23.9999 23.9999M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4M34 24C34 29.5228 29.5228 34 24 34C18.4772 34 14 29.5228 14 24C14 18.4772 18.4772 14 24 14"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="personalized">
+        <path d="M40.8 20.5996V13.1996C40.8 9.83929 40.8 8.15914 40.146 6.87567C39.5708 5.74669 38.6529 4.82881 37.5239 4.25357C36.2405 3.59961 34.5603 3.59961 31.2 3.59961H13.6C10.2397 3.59961 8.55953 3.59961 7.27606 4.25357C6.14708 4.82881 5.2292 5.74669 4.65396 6.87567C4 8.15914 4 9.83929 4 13.1996V33.9996C4 37.3599 4 39.0401 4.65396 40.3236C5.2292 41.4525 6.14708 42.3704 7.27606 42.9456C8.55953 43.5996 10.2397 43.5996 13.6 43.5996H23.8M44.8 43.5996L41.8 40.5996M43.8 35.5996C43.8 39.4656 40.666 42.5996 36.8 42.5996C32.934 42.5996 29.8 39.4656 29.8 35.5996C29.8 31.7336 32.934 28.5996 36.8 28.5996C40.666 28.5996 43.8 31.7336 43.8 35.5996Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="language">
+        <path d="M25.8261 34H40.1739M25.8261 34L22 42M25.8261 34L31.5566 22.018C32.0183 21.0525 32.2492 20.5698 32.5651 20.4172C32.8399 20.2846 33.1601 20.2846 33.4349 20.4172C33.7508 20.5698 33.9817 21.0525 34.4434 22.018L40.1739 34M40.1739 34L44 42M4 10H16M16 10H23M16 10V6M23 10H28M23 10C22.0077 15.9146 19.7052 21.2724 16.3311 25.7689M20 28C18.7749 27.4496 17.5253 26.6842 16.3311 25.7689M16.3311 25.7689C13.626 23.6955 11.2055 20.8533 10 18M16.3311 25.7689C13.1217 30.0459 8.94287 33.5436 4 36"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="accurate">
+        <path d="M22 42C33.0457 42 42 33.0457 42 22C42 10.9543 33.0457 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0457 10.9543 42 22 42Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M22 34C28.6274 34 34 28.6274 34 22C34 15.3726 28.6274 10 22 10C15.3726 10 10 15.3726 10 22C10 28.6274 15.3726 34 22 34Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M22 26C24.2091 26 26 24.2091 26 22C26 19.7909 24.2091 18 22 18C19.7909 18 18 19.7909 18 22C18 24.2091 19.7909 26 22 26Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="inquiry">
+        <path d="M16 16H16.02M28 28H28.02M30 14L14 30M42 22C42 33.0457 33.0457 42 22 42C10.9543 42 2 33.0457 2 22C2 10.9543 10.9543 2 22 2C33.0457 2 42 10.9543 42 22ZM17 16C17 16.5523 16.5523 17 16 17C15.4477 17 15 16.5523 15 16C15 15.4477 15.4477 15 16 15C16.5523 15 17 15.4477 17 16ZM29 28C29 28.5523 28.5523 29 28 29C27.4477 29 27 28.5523 27 28C27 27.4477 27.4477 27 28 27C28.5523 27 29 27.4477 29 28Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="insights">
+        <path d="M33.4907 29.9999C35.0724 27.7323 36 24.9745 36 22C36 20.9702 35.8888 19.9664 35.6778 18.9999M10.5094 30C8.92763 27.7323 8 24.9745 8 22C8 14.268 14.268 8 22 8C22.8443 8 23.6711 8.07473 24.4742 8.21794M30.9998 13L21.9998 22M42 22C42 33.0457 33.0457 42 22 42C10.9543 42 2 33.0457 2 22C2 10.9543 10.9543 2 22 2C33.0457 2 42 10.9543 42 22ZM24 22C24 23.1046 23.1046 24 22 24C20.8954 24 20 23.1046 20 22C20 20.8954 20.8954 20 22 20C23.1046 20 24 20.8954 24 22Z"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" id="star-review">
+        <path d="M10.0005 15.2165L4.12265 18.5067L5.43542 11.8998L0.489929 7.32634L7.17913 6.53322L10.0005 0.416504L12.8219 6.53322L19.511 7.32634L14.5656 11.8998L15.8784 18.5067L10.0005 15.2165Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 12" id="arrow-slider">
+        <path d="M2.71897 5.33327H10.8334V6.6666H2.71897L6.29495 10.2425L5.35215 11.1853L0.166687 5.99993L5.35215 0.814453L6.29495 1.75726L2.71897 5.33327Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="close">
+        <path d="M6.66669 9.99984H13.3334M18.3334 9.99984C18.3334 14.6022 14.6024 18.3332 10 18.3332C5.39765 18.3332 1.66669 14.6022 1.66669 9.99984C1.66669 5.39746 5.39765 1.6665 10 1.6665C14.6024 1.6665 18.3334 5.39746 18.3334 9.99984Z"
+              stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="open">
+        <path d="M10 6.6665V13.3332M6.66669 9.99984H13.3334M18.3334 9.99984C18.3334 14.6022 14.6024 18.3332 10 18.3332C5.39765 18.3332 1.66669 14.6022 1.66669 9.99984C1.66669 5.39746 5.39765 1.6665 10 1.6665C14.6024 1.6665 18.3334 5.39746 18.3334 9.99984Z"
+              stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 22" id="facebook">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10.5 21.5C16.299 21.5 21 16.799 21 11C21 5.20101 16.299 0.5 10.5 0.5C4.70101 0.5 0 5.20101 0 11C0 16.1752 3.74405 20.4759 8.67125 21.3413V14.2112H6V11.2476H8.67125V8.98883C8.67125 6.4197 10.2411 5 12.6452 5C13.7959 5 15 5.20024 15 5.20024V7.7233H13.6726C12.3657 7.7233 11.9589 8.51428 11.9589 9.32524V11.2476H14.8767L14.4103 14.2112H11.9589V21.3759C11.4525 21.4534 10.9351 21.4952 10.4084 21.4996C10.4389 21.4999 10.4694 21.5 10.5 21.5Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" id="instagram">
+        <path d="M10.5 13C12.1569 13 13.5 11.6569 13.5 10C13.5 8.34315 12.1569 7 10.5 7C8.84315 7 7.5 8.34315 7.5 10C7.5 11.6569 8.84315 13 10.5 13Z"
+              fill="currentColor"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.5 0C2.73858 0 0.5 2.23858 0.5 5V15C0.5 17.7614 2.73858 20 5.5 20H15.5C18.2614 20 20.5 17.7614 20.5 15V5C20.5 2.23858 18.2614 0 15.5 0H5.5ZM10.5 15C13.2614 15 15.5 12.7614 15.5 10C15.5 7.23858 13.2614 5 10.5 5C7.73858 5 5.5 7.23858 5.5 10C5.5 12.7614 7.73858 15 10.5 15ZM17.5 4C17.5 4.55228 17.0523 5 16.5 5C15.9477 5 15.5 4.55228 15.5 4C15.5 3.44772 15.9477 3 16.5 3C17.0523 3 17.5 3.44772 17.5 4Z"
+              fill="currentColor"></path>
+    </symbol>
+</svg>
+
+<header class="site-header">
+    <div class="site-header__container">
+        <a href="/" class="site-header__logo">
+            <img src="img/logo.png" alt="Logo Car-Search" width="175" height="36">
+        </a>
+        <nav class="site-header__nav">
+            <ul class="site-header__menu">
+                <li class="site-header__menu-item"><a href="#home" class="scroll-link">Home</a></li>
+                <li class="site-header__menu-item"><a href="#how" class="scroll-link">How to use</a></li>
+                <li class="site-header__menu-item"><a href="#features" class="scroll-link">Why?</a></li>
+                <li class="site-header__menu-item"><a href="#about" class="scroll-link">About</a></li>
+                <li class="site-header__menu-item"><a href="#faq" class="scroll-link">FAQ</a></li>
+            </ul>
+        </nav>
+        <a href="#home" class="site-header__button scroll-link">Try It Free</a>
+    </div>
+
+    <div class="site-header__mobile">
+        <a href="/" class="site-header__logo">
+            <img src="img/logo-small.png" alt="Logo Car-Search" width="152" height="31">
+        </a>
+        <div class="site-header__hamburger">
+            <div class="site-header__hamburger-line"></div>
+            <div class="site-header__hamburger-line"></div>
+            <div class="site-header__hamburger-line"></div>
+        </div>
+        <nav class="site-header__mobile-nav">
+            <ul class="site-header__mobile-menu">
+                <li class="site-header__mobile-menu-item"><a href="#home" class="scroll-link">Home</a></li>
+                <li class="site-header__mobile-menu-item"><a href="#how" class="scroll-link">How to use</a></li>
+                <li class="site-header__mobile-menu-item"><a href="#features" class="scroll-link">Why?</a></li>
+                <li class="site-header__mobile-menu-item"><a href="#about" class="scroll-link">About</a></li>
+                <li class="site-header__mobile-menu-item"><a href="#faq" class="scroll-link">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="site-main">
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">The Easiest Way To Find Cars For Sale In Your Area</h1>
+
+            <p class="hero__subtitle">
+                No more filters. No more frustration. Just describe what you're looking for and get the best
+                local car
+                matches quickly and easily. Buy with confidence, avoid overpaying, and skip the usual tricks and
+                traps
+                with a smarter way to search.
+            </p>
+
+            <div class="hero__buttons">
+                <a href="#home" class="hero__button hero__button--primary scroll-link">Try It Free
+                    <svg class="hero__button-icon" width="17" height="12">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+                <a href="#home" class="hero__button hero__button--secondary scroll-link">Get in Touch
+                    <svg class="hero__button-icon" width="17" height="12">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div id="home" class="hero__image">
+                <picture class="hero__background">
+                    <source srcset="img/background-desktop.jpg" type="image/jpg" media="(min-width: 1024px)">
+                    <source srcset="img/background-table.jpg" type="image/jpg" media="(min-width: 768px)">
+                    <source srcset="img/background-mobile.jpg" type="image/jpg">
+                    <img src="img/background-mobile.jpg" alt="Hero Tag">
+                </picture>
+                <picture class="hero__tag">
+                    <source srcset="img/hero-tag-desktop.png" type="image/png" media="(min-width: 1024px)">
+                    <source srcset="img/hero-tag-table.png" type="image/png" media="(min-width: 768px)">
+                    <source srcset="img/hero-tag-mobile.png" type="image/png">
+                    <img src="img/hero-tag-mobile.png" alt="Hero Tag">
+                </picture>
+                <iframe class="hero__iframe" src="#" allowfullscreen
+                        loading="lazy"
+                        title="Video"
+                        frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="common-searches">
+        <div class="common-searches__header">
+            <svg class="common-searches__header-icon" width="24" height="24">
+                <use xlink:href="#searches"></use>
+            </svg>
+            <span class="common-searches__header-text">Searches</span>
+        </div>
+        <h2 class="common-searches__title">Common Searches</h2>
+        <div class="common-searches__list">
+            <div class="common-searches__item">
+                <img class="common-searches__item-img" src="img/common-searches-1.jpg"
+                     alt="Best Used SUVs Under $20,000">
+                <h3 class="common-searches__item-title">Best Used SUVs Under $20,000</h3>
+                <p class="common-searches__item-desc">Reliable and spacious SUVs for families, road trips, or
+                    daily
+                    driving. All under $20K.</p>
+            </div>
+            <div class="common-searches__item">
+                <img class="common-searches__item-img" src="img/common-searches-2.jpg"
+                     alt="EVs and Hybrids Near Me">
+                <h3 class="common-searches__item-title">EVs and Hybrids Near Me</h3>
+                <p class="common-searches__item-desc">Electric and hybrid options that fit your budget and
+                    lifestyle.
+                    From quick city cars to long-range
+                    commuters.</p>
+            </div>
+            <div class="common-searches__item">
+                <img class="common-searches__item-img" src="img/common-searches-3.jpg"
+                     alt="Smart Picks for First-Time Drivers">
+                <h3 class="common-searches__item-title">Smart Picks for First-Time Drivers</h3>
+                <p class="common-searches__item-desc">Discover reliable, budget-friendly cars with low insurance
+                    costs -
+                    ideal for new drivers.</p>
+            </div>
+        </div>
+        <a href="#home" class="common-searches__button scroll-link">Start Your Search
+            <svg class="common-searches__button-icon" width="17" height="12">
+                <use xlink:href="#arrow"></use>
+            </svg>
+        </a>
+    </section>
+
+    <section class="testimonial">
+        <svg class="testimonial__icon" width="50" height="40">
+            <use xlink:href="#quote"></use>
+        </svg>
+        <svg class="testimonial__icon testimonial__icon-rotate" width="50" height="40">
+            <use xlink:href="#quote"></use>
+        </svg>
+        <blockquote class="testimonial__quote">
+            <div class="testimonial__quote-stars">
+                <svg class="testimonial__quote-star" width="24" height="24">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="testimonial__quote-star" width="24" height="24">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="testimonial__quote-star" width="24" height="24">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="testimonial__quote-star" width="24" height="24">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="testimonial__quote-star" width="24" height="24">
+                    <use xlink:href="#star"></use>
+                </svg>
+            </div>
+            <p class="testimonial__quote-text">
+                <span class="testimonial__quote-text-title">Real People, Real Results.</span>
+                I could ask vague questions and it would still understand what I meant. I don’t know proper car
+                terminology but it still understood and was able to explain the selections to me
+            </p>
+        </blockquote>
+        <div class="testimonial__author">
+            <img class="testimonial__author-img" src="img/testimonial-author.png" width="60" height="60"
+                 alt="Author">
+            <div class="testimonial__author-info">
+                <p class="testimonial__author-name">Michael K. Kalman</p>
+                <p class="testimonial__author-role">CEO / CSO / CMO / Advisor</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="features__container">
+            <div class="features__header">
+                <svg class="features__header-icon" width="24" height="24">
+                    <use xlink:href="#searches"></use>
+                </svg>
+                <span class="features__header-text">Why Choose Us</span>
+            </div>
+            <h2 class="features__title">Clearer, Smarter Car Search</h2>
+            <div class="features__grid">
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#filters"></use>
+                    </svg>
+                    <h3 class="features__item-title">No Filters, No Complexity</h3>
+                    <p class="features__item-text">Eliminates dropdowns and traditional filtering systems by
+                        delivering
+                        tailored results based on described needs.</p>
+                </div>
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#personalized"></use>
+                    </svg>
+                    <h3 class="features__item-title">Personalized Search Experience</h3>
+                    <p class="features__item-text">Adapts intelligently to individual preferences, requirements,
+                        and
+                        lifestyle considerations to provide relevant vehicle matches.</p>
+                </div>
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#language"></use>
+                    </svg>
+                    <h3 class="features__item-title">Natural Language Input</h3>
+                    <p class="features__item-text">Accepts plain language input and interprets intent
+                        accurately,
+                        enabling a seamless and intuitive search process.</p>
+                </div>
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#accurate"></use>
+                    </svg>
+                    <h3 class="features__item-title">Accurate Local Results</h3>
+                    <p class="features__item-text">Displays only vehicles currently available through nearby
+                        dealerships, ensuring up-to-date and relevant search outcomes.</p>
+                </div>
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#inquiry"></use>
+                    </svg>
+                    <h3 class="features__item-title">Seamless Budget Control and Inquiry</h3>
+                    <p class="features__item-text">Supports quick adjustments to budget and criteria, along with
+                        streamlined options to request more information or pricing.</p>
+                </div>
+                <div class="features__item">
+                    <svg class="features__item-icon" width="48" height="48">
+                        <use xlink:href="#insights"></use>
+                    </svg>
+                    <h3 class="features__item-title">Clear Feature Insights</h3>
+                    <p class="features__item-text">Provides clear, non-technical explanations of specifications
+                        and
+                        features to support confident comparison and selection.</p>
+                </div>
+            </div>
+            <a href="#home" class="features__button scroll-link">Start Your Search
+                <svg class="features__button-icon" width="17" height="12">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about__header">
+            <svg class="about__header-icon" width="24" height="24">
+                <use xlink:href="#searches"></use>
+            </svg>
+            <span class="about__header-text">About Car-Search</span>
+        </div>
+
+        <div class="about__content">
+            <h2 class="about__title">Car-Search.ai</h2>
+            <img src="img/search-icon.png" alt="Car-Search.ai" width="39" height="39">
+        </div>
+
+        <div class="about__content">
+            <p class="about__title about__title-1">is redefining how </p>
+        </div>
+        <p class="about__title about__title-2">vehicles are discovered
+            online.</p>
+        <p class="about__text-orange">Purpose-built for simplicity and precision,</p>
+        <p class="about__text about__text-1">the platform replaces outdated search tools with intelligent technology
+            that delivers
+            faster, more relevant results.</p>
+        <p class="about__text about__text-2">Designed for today’s expectations, it removes unnecessary friction from the
+            process and
+            sets a new standard
+            for finding local cars for sale. At every step, Car-Search.ai prioritizes clarity, performance, and
+            unmatched ease of use.</p>
+
+
+    </section>
+
+    <section class="splide" aria-label="Splide reviews sections">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+                <svg class="splide__arrow-icon" width="11" height="10">
+                    <use xlink:href="#arrow-slider"></use>
+                </svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+                <svg class="splide__arrow-icon" width="11" height="10">
+                    <use xlink:href="#arrow-slider"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="splide__track">
+            <div class="splide__list">
+                <div class="splide__slide">
+                    <div class="splide__stars">
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                    </div>
+                    <blockquote class="splide__quote">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula condimentum nunc, a
+                        semper elit luctus id. Duis fringilla enim non neque aliquet, ut efficitur nunc lacinia. Etiam
+                        ornare eget nisi fringilla placerat”
+                    </blockquote>
+                    <div class="splide__author">
+                        <img src="img/testimonial-author.png" alt="Fletch Skinner" class="splide__author-img" width="44"
+                             height="44">
+                        <div class="splide__author-info">
+                            <span class="splide__author-name">Fletch Skinner</span>
+                            <span class="splide__author-role">CEO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="splide__slide">
+                    <div class="splide__stars">
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                    </div>
+                    <blockquote class="splide__quote">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula condimentum nunc, a
+                        semper elit luctus id. Duis fringilla enim non neque aliquet, ut efficitur nunc lacinia. Etiam
+                        ornare eget nisi fringilla placerat”
+                    </blockquote>
+                    <div class="splide__author">
+                        <img src="img/testimonial-author.png" alt="Fletch Skinner" class="splide__author-img" width="44"
+                             height="44">
+                        <div class="splide__author-info">
+                            <span class="splide__author-name">Fletch Skinner</span>
+                            <span class="splide__author-role">CEO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="splide__slide">
+                    <div class="splide__stars">
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                        <svg class="splide__quote-star" width="20" height="20">
+                            <use xlink:href="#star-review"></use>
+                        </svg>
+                    </div>
+                    <blockquote class="splide__quote">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula condimentum nunc, a
+                        semper elit luctus id. Duis fringilla enim non neque aliquet, ut efficitur nunc lacinia. Etiam
+                        ornare eget nisi fringilla placerat”
+                    </blockquote>
+                    <div class="splide__author">
+                        <img src="img/testimonial-author.png" alt="Fletch Skinner" class="splide__author-img" width="44"
+                             height="44">
+                        <div class="splide__author-info">
+                            <span class="splide__author-name">Fletch Skinner</span>
+                            <span class="splide__author-role">CEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="faq__header">
+            <span class="faq__header-dots"></span>
+            <span class="faq__header-text">Faq</span>
+        </div>
+        <h2 class="faq__title">Frequently Asked Questions</h2>
+        <div class="faq__content">
+            <div class="faq__image">
+                <img src="img/faq-man.jpg" alt="Man" width="340" height="450">
+            </div>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Will I see cars that are actually available?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Can the platform match my tone of voice?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Is it easy to embed Car-Search.ai on my website?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Will it show cars from other dealers?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Can I use it to run promotions?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Does it support finance-related questions?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question-title">
+                        <div class="faq__question">Is there a free trial or demo available?</div>
+                        <svg class="faq__icon faq__icon-open" width="20" height="20">
+                            <use xlink:href="#open"></use>
+                        </svg>
+                        <svg class="faq__icon faq__icon-close" width="20" height="20">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+                    <div class="faq__answer">
+                        Yes. You’ll only see real-time listings from local dealerships. Whether you're searching for a
+                        new or used car for sale, the results reflect what’s currently in stock.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta">
+        <h2 class="cta__title">Find Your Ideal Car Without the Guesswork</h2>
+        <p class="cta__text">
+            Just describe what you're looking for and get the best local car matches quickly and easily. Buy with
+            confidence, avoid overpaying, and skip the usual tricks and traps with a smarter way to search.
+        </p>
+        <div class="cta__buttons">
+            <a href="#home" class="cta__button cta__button--primary scroll-link">Try It Free
+                <svg class="cta__button-icon" width="17" height="12">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <a href="#" class="cta__button cta__button--secondary scroll-link">Get In Touch
+                <svg class="cta__button-icon" width="17" height="12">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__container">
+        <div class="site-footer__top">
+            <div class="site-footer__info">
+                <a href="/" class="site-footer__logo">
+                    <img src="img/logo-white.png" alt="Logo Car-Search" width="175" height="36">
+                </a>
+                <p class="site-footer__description">
+                    No more filters. No more frustration. Just describe what you're looking for and get the best local
+                    car
+                    matches quickly and easily. Buy with confidence, avoid overpaying, and skip the usual tricks and
+                    traps
+                    with a smarter way to search.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <div class="site-footer__column">
+                    <h3 class="site-footer__column-title">Quick Link</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="#home" class="scroll-link">Home</a></li>
+                        <li><a href="#how" class="scroll-link">How to use</a></li>
+                        <li><a href="#features" class="scroll-link">Why?</a></li>
+                        <li><a href="#about" class="scroll-link">About</a></li>
+                        <li><a href="#faq" class="scroll-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__column-title">Others Link</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <p class="site-footer__copyright">
+                Copyright 2025 © | All Rights Reserved | <a href="https://www.mykoladesigner.com/">Designed by Mykola
+                Ledenov</a>
+            </p>
+            <div class="site-footer__social">
+                <a href="#" class="site-footer__social-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="site-footer__social-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
