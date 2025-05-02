@@ -126,5 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
+    AOS.init({
+        duration: 800, // тривалість анімації
+        once: true,    // анімується лише 1 раз
+    });
 });

@@ -12,6 +12,8 @@
     <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 " rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <meta name="description" content="">
 
     <meta property="og:title" content="">
@@ -150,9 +152,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__title">The Easiest Way To Find Cars For Sale In Your Area</h1>
+            <h1 class="hero__title" data-aos="fade-right">The Easiest Way To Find Cars For Sale In Your Area</h1>
 
-            <p class="hero__subtitle">
+            <p class="hero__subtitle" data-aos="fade-left">
                 No more filters. No more frustration. Just describe what you're looking for and get the best
                 local car
                 matches quickly and easily. Buy with confidence, avoid overpaying, and skip the usual tricks and
@@ -161,12 +163,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </p>
 
             <div class="hero__buttons">
-                <a href="#home" class="hero__button hero__button--primary scroll-link">Try It Free
+                <a href="#home" class="hero__button hero__button--primary scroll-link" data-aos="fade-right">Try It Free
                     <svg class="hero__button-icon" width="17" height="12">
                         <use xlink:href="#arrow"></use>
                     </svg>
                 </a>
-                <a href="#home" class="hero__button hero__button--secondary scroll-link">Get in Touch
+                <a href="#home" class="hero__button hero__button--secondary scroll-link" data-aos="fade-left">Get in
+                    Touch
                     <svg class="hero__button-icon" width="17" height="12">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -186,24 +189,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <source srcset="img/hero-tag-mobile.png" type="image/png">
                     <img src="img/hero-tag-mobile.png" alt="Hero Tag">
                 </picture>
-                <iframe class="hero__iframe" src="#" allowfullscreen
-                        loading="lazy"
-                        title="Video"
-                        frameborder="0"></iframe>
+                <!--                <iframe class="hero__iframe" src="" allowfullscreen-->
+                <!--                        loading="lazy"-->
+                <!--                        title="Video"-->
+                <!--                        frameborder="0"></iframe>-->
+                <img src="img/placeholder.jpg" alt="Placeholder img" class="hero__iframe">
             </div>
         </div>
     </section>
 
     <section id="how" class="common-searches">
-        <div class="common-searches__header">
+        <div class="common-searches__header" data-aos="fade-zoom-in">
             <svg class="common-searches__header-icon" width="24" height="24">
                 <use xlink:href="#searches"></use>
             </svg>
             <span class="common-searches__header-text">Searches</span>
         </div>
-        <h2 class="common-searches__title">Common Searches</h2>
+        <h2 class="common-searches__title" data-aos="fade-right">Common Searches</h2>
         <div class="common-searches__list">
-            <div class="common-searches__item">
+            <div data-aos="fade-up" class="common-searches__item">
                 <img class="common-searches__item-img" src="img/common-searches-1.jpg"
                      alt="Best Used SUVs Under $20,000">
                 <h3 class="common-searches__item-title">Best Used SUVs Under $20,000</h3>
@@ -211,16 +215,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     daily
                     driving. All under $20K.</p>
             </div>
-            <div class="common-searches__item">
+            <div data-aos="fade-up" data-aos-delay="300" class="common-searches__item">
                 <img class="common-searches__item-img" src="img/common-searches-2.jpg"
                      alt="EVs and Hybrids Near Me">
-                <h3 class="common-searches__item-title">EVs and Hybrids Near Me</h3>
+                <h3 class="common-searches__item-title">EVs and Hybrids <br> Near Me</h3>
                 <p class="common-searches__item-desc">Electric and hybrid options that fit your budget and
                     lifestyle.
                     From quick city cars to long-range
                     commuters.</p>
             </div>
-            <div class="common-searches__item">
+            <div data-aos="fade-up" data-aos-delay="600" class="common-searches__item">
                 <img class="common-searches__item-img" src="img/common-searches-3.jpg"
                      alt="Smart Picks for First-Time Drivers">
                 <h3 class="common-searches__item-title">Smart Picks for First-Time Drivers</h3>
@@ -229,7 +233,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     ideal for new drivers.</p>
             </div>
         </div>
-        <a href="#home" class="common-searches__button scroll-link">Start Your Search
+        <a href="#home" class="common-searches__button scroll-link" data-aos="fade-left">Start Your Search
             <svg class="common-searches__button-icon" width="17" height="12">
                 <use xlink:href="#arrow"></use>
             </svg>
@@ -237,57 +241,72 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </section>
 
     <section class="testimonial">
-        <svg class="testimonial__icon" width="50" height="40">
-            <use xlink:href="#quote"></use>
-        </svg>
-        <svg class="testimonial__icon testimonial__icon-rotate" width="50" height="40">
-            <use xlink:href="#quote"></use>
-        </svg>
-        <blockquote class="testimonial__quote">
-            <div class="testimonial__quote-stars">
-                <svg class="testimonial__quote-star" width="24" height="24">
-                    <use xlink:href="#star"></use>
-                </svg>
-                <svg class="testimonial__quote-star" width="24" height="24">
-                    <use xlink:href="#star"></use>
-                </svg>
-                <svg class="testimonial__quote-star" width="24" height="24">
-                    <use xlink:href="#star"></use>
-                </svg>
-                <svg class="testimonial__quote-star" width="24" height="24">
-                    <use xlink:href="#star"></use>
-                </svg>
-                <svg class="testimonial__quote-star" width="24" height="24">
-                    <use xlink:href="#star"></use>
-                </svg>
-            </div>
-            <p class="testimonial__quote-text">
-                <span class="testimonial__quote-text-title">Real People, Real Results.</span>
-                I could ask vague questions and it would still understand what I meant. I don’t know proper car
-                terminology but it still understood and was able to explain the selections to me
-            </p>
-        </blockquote>
-        <div class="testimonial__author">
-            <img class="testimonial__author-img" src="img/testimonial-author.png" width="60" height="60"
-                 alt="Author">
-            <div class="testimonial__author-info">
-                <p class="testimonial__author-name">Michael K. Kalman</p>
-                <p class="testimonial__author-role">CEO / CSO / CMO / Advisor</p>
+        <div class="testimonial__content" data-aos="zoom-out-up">
+            <svg class="testimonial__icon" width="50" height="40">
+                <use xlink:href="#quote"></use>
+            </svg>
+            <svg class="testimonial__icon testimonial__icon-rotate" width="50" height="40">
+                <use xlink:href="#quote"></use>
+            </svg>
+            <blockquote class="testimonial__quote">
+                <div class="testimonial__quote-stars">
+                    <svg class="testimonial__quote-star" width="24" height="24">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="testimonial__quote-star" width="24" height="24">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="testimonial__quote-star" width="24" height="24">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="testimonial__quote-star" width="24" height="24">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="testimonial__quote-star" width="24" height="24">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                </div>
+                <p class="testimonial__quote-text">
+                    <span class="testimonial__quote-text-title">Real People, Real Results.</span>
+                    I could ask vague questions and it would still understand what I meant. I don’t know proper car
+                    terminology but it still understood and was able to explain the selections to me
+                </p>
+            </blockquote>
+            <div class="testimonial__author">
+                <img class="testimonial__author-img" src="img/testimonial-author.png" width="60" height="60"
+                     alt="Author">
+                <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">Michael K. Kalman</p>
+                    <p class="testimonial__author-role">CEO / CSO / CMO / Advisor</p>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section id="features" class="features">
+        <picture class="features__bg-left">
+            <source srcset="img/features-bg-left-desktop.svg" type="image/svg+xml" media="(min-width: 1024px)">
+            <source srcset="img/features-bg-left-table.svg" type="image/svg+xml" media="(min-width: 768px)">
+            <source srcset="img/features-bg-left-mobile.svg" type="image/svg+xml">
+            <img src="img/features-bg-left-mobile.svg" alt="Hero Tag">
+        </picture>
+        <picture class="features__bg-right">
+            <source srcset="img/features-bg-right-desktop.svg" type="image/svg+xml" media="(min-width: 1024px)">
+            <source srcset="img/features-bg-right-desktop.svg" type="image/svg+xml" media="(min-width: 768px)">
+            <source srcset="img/features-bg-right-mobile.svg" type="image/svg+xml">
+            <img src="img/features-bg-right-mobile.svg" alt="Hero Tag">
+        </picture>
         <div class="features__container">
-            <div class="features__header">
+            <div class="features__header" data-aos="fade-zoom-in">
                 <svg class="features__header-icon" width="24" height="24">
                     <use xlink:href="#searches"></use>
                 </svg>
                 <span class="features__header-text">Why Choose Us</span>
             </div>
-            <h2 class="features__title">Clearer, Smarter Car Search</h2>
+            <h2 class="features__title" data-aos="fade-right">Clearer, Smarter Car Search</h2>
             <div class="features__grid">
-                <div class="features__item">
+                <div data-aos="fade-up" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#filters"></use>
                     </svg>
@@ -296,7 +315,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         delivering
                         tailored results based on described needs.</p>
                 </div>
-                <div class="features__item">
+                <div data-aos="fade-up" data-aos-delay="100" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#personalized"></use>
                     </svg>
@@ -305,7 +324,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         and
                         lifestyle considerations to provide relevant vehicle matches.</p>
                 </div>
-                <div class="features__item">
+                <div data-aos="fade-up" data-aos-delay="200" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#language"></use>
                     </svg>
@@ -314,7 +333,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         accurately,
                         enabling a seamless and intuitive search process.</p>
                 </div>
-                <div class="features__item">
+                <div data-aos="fade-up" data-aos-delay="300" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#accurate"></use>
                     </svg>
@@ -322,7 +341,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <p class="features__item-text">Displays only vehicles currently available through nearby
                         dealerships, ensuring up-to-date and relevant search outcomes.</p>
                 </div>
-                <div class="features__item">
+                <div data-aos="fade-up" data-aos-delay="400" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#inquiry"></use>
                     </svg>
@@ -330,7 +349,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <p class="features__item-text">Supports quick adjustments to budget and criteria, along with
                         streamlined options to request more information or pricing.</p>
                 </div>
-                <div class="features__item">
+                <div data-aos="fade-up" data-aos-delay="500" class="features__item">
                     <svg class="features__item-icon" width="48" height="48">
                         <use xlink:href="#insights"></use>
                     </svg>
@@ -340,7 +359,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         features to support confident comparison and selection.</p>
                 </div>
             </div>
-            <a href="#home" class="features__button scroll-link">Start Your Search
+            <a href="#home" class="features__button scroll-link" data-aos="fade-left">Start Your Search
                 <svg class="features__button-icon" width="17" height="12">
                     <use xlink:href="#arrow"></use>
                 </svg>
@@ -500,12 +519,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <span class="faq__header-dots"></span>
             <span class="faq__header-text">Faq</span>
         </div>
-        <h2 class="faq__title">Frequently Asked Questions</h2>
+        <h2 class="faq__title" data-aos="fade-right">Frequently Asked Questions</h2>
         <div class="faq__content">
-            <div class="faq__image">
+            <div class="faq__image" data-aos="fade-right">
                 <img src="img/faq-man.jpg" alt="Man" width="340" height="450">
             </div>
-            <div class="faq__list">
+            <div class="faq__list" data-aos="fade-left">
                 <div class="faq__item">
                     <div class="faq__question-title">
                         <div class="faq__question">Will I see cars that are actually available?</div>
@@ -624,18 +643,18 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
     <section class="cta">
-        <h2 class="cta__title">Find Your Ideal Car Without the Guesswork</h2>
-        <p class="cta__text">
+        <h2 class="cta__title" data-aos="fade-zoom-in">Find Your Ideal Car Without the Guesswork</h2>
+        <p class="cta__text" data-aos="fade-zoom-in">
             Just describe what you're looking for and get the best local car matches quickly and easily. Buy with
             confidence, avoid overpaying, and skip the usual tricks and traps with a smarter way to search.
         </p>
         <div class="cta__buttons">
-            <a href="#home" class="cta__button cta__button--primary scroll-link">Try It Free
+            <a href="#home" class="cta__button cta__button--primary scroll-link" data-aos="fade-right">Try It Free
                 <svg class="cta__button-icon" width="17" height="12">
                     <use xlink:href="#arrow"></use>
                 </svg>
             </a>
-            <a href="#" class="cta__button cta__button--secondary scroll-link">Get In Touch
+            <a href="#" class="cta__button cta__button--secondary scroll-link" data-aos="fade-left">Get In Touch
                 <svg class="cta__button-icon" width="17" height="12">
                     <use xlink:href="#arrow"></use>
                 </svg>
@@ -646,6 +665,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </main>
 
 <footer class="site-footer">
+    <img src="img/footer-bg.svg" alt="Footer img" class="site-footer__bg">
     <div class="site-footer__container">
         <div class="site-footer__top">
             <div class="site-footer__info">
@@ -709,6 +729,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <!-- ScrollSmoother requires ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script src="js/app.js"></script>
 
 </body>

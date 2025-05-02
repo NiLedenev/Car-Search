@@ -49,26 +49,32 @@
     }
 
     .common-searches__button-icon {
-        margin-left: 60px;
+        margin-left: 22px;
     }
 
     .testimonial {
         padding: 40px 64px 120px;
     }
 
-    .testimonial__icon {
-        left: 64px;
-    }
-
-    .testimonial__icon-rotate {
-        left: auto;
-        right: 64px;
+    .testimonial__content {
+        max-width: 700px;
     }
 
     .features__container {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .features__bg-left {
+        top: 0;
+        left: 0;
+        width: 150%;
+        height: 100%;
+    }
+
+    .features__bg-right {
+        bottom: -40%;
     }
 
     .features__item {
@@ -80,7 +86,7 @@
     }
 
     .features__button-icon {
-        margin-left: 60px;
+        margin-left: 22px;
     }
 
     .about {
@@ -135,6 +141,11 @@
     .cta__button {
         width: auto;
         padding: 36px 48px;
+    }
+
+    .site-footer__bg {
+        bottom: -10%;
+
     }
 
     .site-footer {
