@@ -74,9 +74,23 @@
         width: 100%;
     }
 
+    .hero__title {
+        max-width: 640px;
+        font-size: 48px;
+    }
+
+    .hero__subtitle {
+        max-width: 800px;
+        font-size: 20px;
+    }
+
     .common-searches__item {
         width: 100%;
         max-width: 336px;
+    }
+
+    .features__grid {
+        max-width: 1284px;
     }
 
     .features__item {
